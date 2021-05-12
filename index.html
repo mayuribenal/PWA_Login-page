@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Login Page</title>
+<style>
+    h1,p{
+        color:"blue";
+        font-family:"Comic Sans MS";
+    }
+    body{
+        background-image: url("index.jpg");
+        background-repeat: no-repeat;
+        -webkit-background-size:cover;
+        -moz--webkit-background-size:cover;
+        -o-background-size:cover;
+        background-size: cover;
+
+    }
+    .button {
+        
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+    }
+    
+	
+</style>
+<link rel="manifest" href="manifest.json">
+<body>
+<div style="margin-top:150px; text-align:center; color:Cerulean;">
+<h1>
+Quote </h1><br><br>
+<p><i>"You learn more from failure than from success. Don’t let it stop you.."</i></p>
+<a href='next.html' class="button">ClickHere</a>
+</div>
+</form>
+<script>
+    if('serviceWorker' in navigator){
+        window.addEventListener('load',()=>{
+            navigator.serviceWorker.register('sw.js')
+        .then(registration =>{
+            console.log('service worker is registered',registration);
+        })
+        .catch(err =>{
+            console.log('Registration failed',err);
+        })
+        })
+    }
+</script>
+
+</body>
+</html>

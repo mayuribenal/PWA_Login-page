@@ -1,0 +1,41 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Login Page</title>
+<style>
+    h1,p{
+        color:"#fff";
+        font-family:"Comic Sans MS";
+    }
+    body{
+        background-image: url("index1.jpg");
+        background-repeat: no-repeat;
+        -webkit-background-size:cover;
+        -moz--webkit-background-size:cover;
+        -o-background-size:cover;
+        background-size: cover;
+    }
+    </style>
+    <link rel="manifest" href= "manifest.json">
+    <body>
+        <div style="margin-top:150px; text-align:center; color:blue;">
+
+        <b></b><h1 > WElCOME </h1><br>
+        <p>"Don't let yesterday take up too much of today."</p>
+        </div></b>
+        <script>
+            if('serviceWorker' in navigator){
+                window.addEventListener('load',()=>{
+                    navigator.serviceWorker.register('sw.js')
+                .then(registration =>{
+                    console.log('service worker is registered',registration);
+                })
+                .catch(err =>{
+                    console.log('Registration failed',err);
+                })
+                })
+            }
+        </script>
+    </body>
+</html>
